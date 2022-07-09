@@ -23,13 +23,11 @@ function Login() {
 
        createUserWithEmailAndPassword(auth,email,password)
         .then((userAuth)=> {
-          debugger;
                 updateProfile(userAuth.user, {
                         displayName: name,
                         photoURL: profile,
                     }) 
                     .then(() =>{
-                      debugger;
                         dispatch(
                             login({
                             email: userAuth.user.email,
