@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { login } from '../../../features/counter/userSlice';
 import { auth } from '../../firebase';
-import { createUserWithEmailAndPassword } from 'firebase/auth'
+import { createUserWithEmailAndPassword, updateProfile} from 'firebase/auth'
 import './Login.css';
 
 function Login() {
@@ -23,11 +23,13 @@ function Login() {
 
        createUserWithEmailAndPassword(auth,email,password)
         .then((userAuth)=> {
-                userAuth.user.updateProfile = () => ({
+          debugger;
+                updateProfile(userAuth.user, {
                         displayName: name,
                         photoURL: profile,
                     }) 
                     .then(() =>{
+                      debugger;
                         dispatch(
                             login({
                             email: userAuth.user.email,
