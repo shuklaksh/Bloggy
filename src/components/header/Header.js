@@ -11,6 +11,9 @@ import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 
 
 function Header() {
+  const logOut = ()=> {
+    
+  }
   return (
     <div className='header'>
       
@@ -28,7 +31,7 @@ function Header() {
         <HeaderOptions Icon={BusinessCenterIcon} text='Jobs' />
         <HeaderOptions Icon={ChatIcon} text='Messages' />
         <HeaderOptions Icon={NotificationsActiveIcon} text='Notifications' />
-        <HeaderOptions avatar="https://avatarfiles.alphacoders.com/855/85557.png" text='Me' />
+        <HeaderOptions avatar="https://avatarfiles.alphacoders.com/855/85557.png" text='Me' onClick={logOut} />
 
 
 
