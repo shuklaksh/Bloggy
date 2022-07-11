@@ -1,8 +1,8 @@
 import React from 'react'
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { login } from '../../../features/counter/userSlice';
-import { auth } from '../../firebase';
+import { login } from '../../features/counter/userSlice';
+import { auth } from '../firebase';
 import { createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword} from 'firebase/auth'
 import './Login.css';
 
@@ -15,7 +15,7 @@ function Login() {
 
     const loginToApp = (e) => {
         e.preventDefault();
-        signInWithEmailAndPassword(email, password)
+        signInWithEmailAndPassword(auth,email, password)
         .then((userAuth)=> {
           dispatch(
             login({

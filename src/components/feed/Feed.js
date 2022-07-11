@@ -9,6 +9,7 @@ import DescriptionIcon from '@mui/icons-material/Description';
 import Post from './Post';
 import {db} from '../firebase'
 import firebase from 'firebase/compat/app';
+import FlipMove from 'react-flip-move';
 
 function Feed() {
     const[input,setInput] = useState('')
@@ -54,6 +55,7 @@ function Feed() {
           </div>
       </div>
       <div className="feed__post">
+      <FlipMove>
         {posts.map(({id, data:{name,description,message}})=>(
             <Post 
                 key={id}
@@ -62,6 +64,7 @@ function Feed() {
                 message={message}
             />
         ))}
+      </FlipMove>
       </div>
     </div>
   )
