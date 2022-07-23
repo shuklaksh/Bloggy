@@ -3,6 +3,6 @@
 }
 .app__body{
     display: flex;
-    justify-content: center;
+    margin: 5rem;
     margin-top: 25px;
 }

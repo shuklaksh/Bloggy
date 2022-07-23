@@ -7,6 +7,7 @@ import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
 import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import ChatIcon from '@mui/icons-material/Chat';
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
+import LogoutIcon from '@mui/icons-material/Logout';
 import { useDispatch } from 'react-redux';
 import {logout } from '../../features/counter/userSlice';
 import { auth, signOut} from '../firebase';
@@ -28,20 +29,15 @@ function Header() {
     <div className='header'>
       
       <div className="header__left">
-        <img src='https://www.svgrepo.com/show/81143/linkedin.svg' />
-        <div className="header__search">
+        <h1>Bloggy</h1>
+      </div>
+      <div className="header__search">
             <SearchIcon />
             <input type='text' />
         </div>
-      </div>
 
       <div className="header__right">
-        <HeaderOptions Icon={HomeIcon} text='Home' />
-        <HeaderOptions Icon={SupervisorAccountIcon} text='My Networks' />
-        <HeaderOptions Icon={BusinessCenterIcon} text='Jobs' />
-        <HeaderOptions Icon={ChatIcon} text='Messages' />
-        <HeaderOptions Icon={NotificationsActiveIcon} text='Notifications' />
-        <HeaderOptions avatar={ true } text='Me' onclick={logOut} />
+        <HeaderOptions Icon={LogoutIcon} text='Log Out' onclick={logOut} />
 
 
 

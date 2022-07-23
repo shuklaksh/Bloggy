@@ -7,7 +7,9 @@ import Widgets from './components/widgets/Widgets';
 import { useDispatch, useSelector} from 'react-redux';
 import { login, selectUser, logout } from './features/counter/userSlice';
 import Login from './components/login/Login';
+import Entry from './components/login components/Entry';
 import { auth } from './components/firebase';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
   const user = useSelector(selectUser)
@@ -33,7 +35,7 @@ function App() {
   return (
     <div className="app">
       {!user ? 
-      <Login /> : <>
+      <Entry /> : <>
         <Header />
         <div className="app__body">
           <Sidebar />

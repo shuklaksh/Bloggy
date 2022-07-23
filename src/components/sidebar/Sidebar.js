@@ -1,7 +1,10 @@
 import { Avatar } from '@mui/material'
+import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { selectUser } from '../../features/counter/userSlice';
 import './Sidebar.css';
+import {db} from '../firebase'
+import { useEffect } from 'react';
 
 function Sidebar() {
     const user = useSelector(selectUser);
@@ -11,6 +14,7 @@ function Sidebar() {
             <h3 className='item'># {hashtag}</h3>
         )
     }
+    
   return (
     <div className='sidebar'>
       <div className="sidebar__top">
@@ -21,28 +25,22 @@ function Sidebar() {
           <h2>{user.displayName}</h2>
           <h3>{user.email}</h3>
       </div>
-
-      <div className="sidebar__stats">
-          <div className="sidebar__stat">
-              <p>Who's viewed your profile?</p>
-              <p className='sidebar__statNumber'> 108 </p>
-          </div>
-          <div className="sidebar__stat">
-              <p>Impression of your posts</p>
-              <p className='sidebar__statNumber'> 54 </p>
-          </div>
-        </div>
         
         <div className="sidebar__bottom">
-            <p>Recent</p>
+            <p>Introduction</p>
             <div className="recentItems">
-                {items('reactjs')}
+                {/* {items('reactjs')}
                 {items('frondend')}
                 {items('DSA')}
                 {items('MAANGA')}
                 {items('softwareengineering')}
                 {items('design')}
-                {items('javascript')}
+                {items('javascript')} */}
+                <p>Bloggy is an open social network that people use to converse 
+                with each other in short messages, known as tweets. Whether it’s 
+                sharing breaking news, posting updates about their company or following 
+                their favourite celebrities, people are using Bloggy to connect with others 
+                and to discover new things every day.</p>
             </div>
         </div>
     </div>
