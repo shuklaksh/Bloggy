@@ -12,7 +12,8 @@ function Signup() {
     const[password,setPassword] = useState("");
     const dispatch = useDispatch();
 
-    const register = () => {
+    const register = (e) => {
+        e.preventDefault();
         if(name == '') {
            return alert('Please Enter Full Name')
         }

@@ -28,11 +28,9 @@
     flex-direction: column;
     align-items: center;
     background-color: white;
-    padding-bottom: 10px;
+    padding-bottom: 2rem;
     border: 2px solid lightgray;
-    border-bottom: none;
-    border-top-left-radius:10px;
-    border-top-right-radius:10px;
+    border-radius:10px;
 }
 
 .sidebar__top > img {
@@ -43,7 +41,7 @@
     border-top-left-radius:10px;
     border-top-right-radius:10px;
 }
-.sidebar__stats {
+/* .sidebar__stats {
     padding: 10px;
     margin-bottom: 10px;
     background-color: white;
@@ -67,10 +65,11 @@
 }
 .sidebar__statNumber {
     color: #0a66c2 !important;
-}
+} */
 
 .sidebar__bottom {
     text-align: left;
+    margin-top: 1.5rem;
     height: fit-content;
     padding: 10px;
     border: 2px solid lightgray;

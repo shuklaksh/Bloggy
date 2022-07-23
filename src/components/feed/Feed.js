@@ -51,12 +51,12 @@ function Feed() {
                 <button type='submit' onClick={sendPost}>Post</button>
               </form>
           </div>
-          <div className="feed__inputOptions">
+          {/* <div className="feed__inputOptions">
                 <InputOption Icon={PhotoIcon} text='Photo' color='#7085f9' />
                 <InputOption Icon={OndemandVideoIcon} text='Video' color='#e7a33e'/>
                 <InputOption Icon={EventIcon} text='Event' color='#c0cbcd'/>
                 <InputOption Icon={DescriptionIcon} text='Write' color='7fc15e'/>
-          </div>
+          </div> */}
       </div>
       <div className="feed__post">
       <FlipMove>
