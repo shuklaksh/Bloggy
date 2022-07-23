@@ -9,7 +9,7 @@ import { login, selectUser, logout } from './features/counter/userSlice';
 import Login from './components/login/Login';
 import Entry from './components/login components/Entry';
 import { auth } from './components/firebase';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 
 function App() {
   const user = useSelector(selectUser)
