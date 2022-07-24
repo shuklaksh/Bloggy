@@ -33,7 +33,7 @@ function SidebarComponent({user}) {
                     {items('design')}
                     {items('javascript')} */}
                     <p>Bloggy is an open social network that people use to converse 
-                    with each other in short messages, known as tweets. Whether it’s 
+                    with each other in short messages, Whether it’s 
                     sharing breaking news, posting updates about their company or following 
                     their favourite celebrities, people are using Bloggy to connect with others 
                     and to discover new things every day.</p>
