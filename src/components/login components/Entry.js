@@ -4,14 +4,11 @@ import { useDispatch } from 'react-redux';
 import { login } from '../../features/counter/userSlice';
 import { auth } from '../firebase';
 import { signInWithEmailAndPassword} from 'firebase/auth'
-import { Link } from 'react-router-dom';
 import Signup from './Signup';
 
 function Entry() {
     const[email,setEmail] = useState("");
     const[password,setPassword] = useState("");
-    const[name,setName] = useState("");
-    const[profile,setProfile] = useState("");
     const[display,setDisplay] = useState(true);
     const dispatch = useDispatch();
 
@@ -27,8 +24,8 @@ function Entry() {
             login({
             email: userAuth.user.email,
             uid: userAuth.user.uid,
-            displayName: name,
-            photoURL: profile
+            displayName: userAuth.user.displayName,
+            photoURL: userAuth.user.photoURL
         }))
         })
           .catch((error) => alert(error) );

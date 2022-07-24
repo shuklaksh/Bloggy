@@ -14,7 +14,7 @@ function Signup() {
 
     const register = (e) => {
         e.preventDefault();
-        if(name == '') {
+        if(name ==='') {
            return alert('Please Enter Full Name')
         }
 
@@ -49,7 +49,7 @@ function Signup() {
             <input value={email} onChange= {(e) => {setEmail(e.target.value)}} type='email' className='signupInput' placeholder='name@gmail.com' />
             <h2>Set password</h2>
             <input value={password} onChange= {(e) => {setPassword(e.target.value)}} type='password' className='signupInput' placeholder='*******' />
-            <button classname='signupBtn'  onClick={register} type='submit'> SignUp</button>
+            <button className='signupBtn'  onClick={register} type='submit'> SignUp</button>
       </form>
     </div>
   )
